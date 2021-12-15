@@ -1,7 +1,7 @@
 import React from "react";
 
-function Text() {
-  return <p>Soy un parrafo de prueba</p>;
+function Text(props) {
+  return <p>{props.content}</p>;
 }
 
 export default Text;
