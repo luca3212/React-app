@@ -1,0 +1,66 @@
+body {
+  background-color: #ebebeb;
+}
+
+.headNav {
+  background-color: #fff159;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.contLogo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contLogo img {
+  width: 50%;
+  height: auto;
+}
+
+.ContForm {
+  width: 30%;
+}
+
+.formSearch {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.formSearch input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 42px 10px 8px;
+
+  border-radius: 2px;
+  background-color: #fff;
+  border: 0 rgba(0, 0, 0, 0.2);
+
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+}
+
+.formSearch .btonSearch {
+  position: absolute;
+  height: 100%;
+  padding: 0 8px;
+  right: 0;
+
+  border-radius: 0 2px 2px 0;
+
+  border: 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btonSearch::before {
+  content: "";
+  display: block;
+  height: 24px;
+  border-left: 1px solid #e6e6e6;
+  position: absolute;
+  left: 0;
+}
