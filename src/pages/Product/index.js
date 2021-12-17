@@ -39,6 +39,7 @@ function Product() {
     );
     const jsonData = await data.json();
     setDataProduct(jsonData.results);
+    setInputSearch("");
   }
 
   return (
@@ -62,15 +63,16 @@ function Product() {
       </header>
 
       <main className="contResult">
-        <p>El valor que viene en la url es: {site}</p>
+        {/* <p>El valor que viene en la url es: {site}</p> */}
 
         {dataProduct.length ? (
           <>
+            <h2 className="titleResult">Resultados de la búsqueda</h2>
             <Carrousel infoProduct={dataProduct} />
           </>
         ) : (
           <>
-            <p>no hya data</p>
+            <p></p>
           </>
         )}
       </main>

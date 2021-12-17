@@ -35,7 +35,7 @@ body {
   width: 100%;
   font-size: 16px;
   padding: 10px 42px 10px 8px;
-
+  outline: none;
   border-radius: 2px;
   background-color: #fff;
   border: 0 rgba(0, 0, 0, 0.2);
@@ -71,4 +71,46 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.titleResult {
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .contLogo {
+    width: 40%;
+  }
+
+  .contLogo img {
+    width: 70%;
+  }
+
+  .ContForm {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .formSearch {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .headNav {
+    flex-direction: column;
+  }
+
+  .contLogo {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .contLogo img {
+    width: 50%;
+  }
+  .ContForm {
+    width: 100%;
+    margin: 5px 0 10px 0;
+  }
 }

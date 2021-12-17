@@ -20,6 +20,7 @@ function Card(props) {
         {infoProduct.shipping.free_shipping && <h2>Envío Gratis</h2>}
         <p>{infoProduct.title}</p>
       </div>
+      
     </div>
   );
 }

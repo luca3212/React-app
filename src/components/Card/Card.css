@@ -6,6 +6,8 @@
   height: 314px;
   font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
     Arial, sans-serif;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+  border-radius: 4px;
   transition: height 0.1s ease-out;
 }
 .contPic {
@@ -41,12 +43,17 @@
   color: #666;
   font-size: 14px;
   font-weight: 300;
-  opacity: 1;
-  transition: 1s;
+
+  opacity: 0;
+  transition: opacity 0.18s ease-out;
 }
 
 .contCard:hover {
   box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
   border-radius: 4px;
   height: max-content;
+}
+
+.contCard:hover .conteInfo p {
+  opacity: 1;
 }
