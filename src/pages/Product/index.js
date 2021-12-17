@@ -5,11 +5,11 @@ import Icon from "@mdi/react";
 import { mdiMagnify } from "@mdi/js";
 import "./Product.css";
 
+import Carrousel from "../../components/Carrousel";
+
 function Product() {
   const { site } = useParams();
-
   const [inputSearch, setInputSearch] = useState("");
-  const [stateSearch, setStateSearch] = useState(false);
 
   function handleChange(e) {
     const { value } = e.target;
@@ -20,16 +20,25 @@ function Product() {
   function handleClick() {
     if (inputSearch.trim() !== "") {
       console.log("valido");
-      setStateSearch(true);
+      fetchData();
     } else {
       console.log("error");
-      setStateSearch(false);
     }
   }
 
   function submitHandler(e) {
     e.preventDefault();
     handleClick();
+  }
+
+  const [dataProduct, setDataProduct] = useState([]);
+
+  async function fetchData() {
+    const data = await fetch(
+      `https://api.mercadolibre.com/sites/${site}/search?q=${inputSearch}`
+    );
+    const jsonData = await data.json();
+    setDataProduct(jsonData.results);
   }
 
   return (
@@ -52,13 +61,16 @@ function Product() {
         </div>
       </header>
 
-      <main>
+      <main className="contResult">
         <p>El valor que viene en la url es: {site}</p>
 
-        {stateSearch && (
+        {dataProduct.length ? (
           <>
-            <p>busqueda iniciada</p>
-            <p>{inputSearch}</p>
+            <Carrousel infoProduct={dataProduct} />
+          </>
+        ) : (
+          <>
+            <p>no hya data</p>
           </>
         )}
       </main>

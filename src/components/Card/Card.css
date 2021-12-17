@@ -1,0 +1,52 @@
+.contCard {
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  width: 224px;
+  height: 314px;
+  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+  transition: height 0.1s ease-out;
+}
+.contPic {
+  width: 224px;
+  height: 224px;
+}
+.contPic img {
+  width: 100%;
+  height: 100%;
+}
+
+.conteInfo {
+  padding: 20px 16px;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.conteInfo h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.conteInfo h2 {
+  color: #00a650;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-top: 5px;
+}
+
+.conteInfo p {
+  margin-top: 5px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 1;
+  transition: 1s;
+}
+
+.contCard:hover {
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  height: max-content;
+}
