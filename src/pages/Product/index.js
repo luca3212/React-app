@@ -4,7 +4,7 @@ import logoSmall from "../../picture/logo-s.png";
 import Icon from "@mdi/react";
 import { mdiMagnify } from "@mdi/js";
 import "./Product.css";
-
+import FormaPago from "../../picture/cuotas.png";
 import Carrousel from "../../components/Carrousel";
 
 function Product() {
@@ -63,12 +63,14 @@ function Product() {
       </header>
 
       <main className="contResult">
-        {/* <p>El valor que viene en la url es: {site}</p> */}
-
         {dataProduct.length ? (
           <>
             <h2 className="titleResult">Resultados de la búsqueda</h2>
             <Carrousel infoProduct={dataProduct} />
+            <div className="infoPago">
+              <h2>Promoción:</h2>
+              <img src={FormaPago} alt="FormadePago" />
+            </div>
           </>
         ) : (
           <>

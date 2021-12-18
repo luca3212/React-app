@@ -45,9 +45,7 @@ function Carrousel(props) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 0,
-          className: "center",
-          centerMode: true
+          initialSlide: 0
         }
       }
     ]
