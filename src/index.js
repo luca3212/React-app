@@ -10,8 +10,8 @@ import Product  from './pages/Product';
 
 
 ReactDOM.render(
-  <Router>
-    <Routes basename={process.env.PUBLIC_URL}>
+  <Router basename={process.env.PUBLIC_URL}>
+    <Routes>
       <Route exact path="" element={<App/>} />
       <Route path="carousel/:site" element={<Product/>}/>
     </Routes>
