@@ -11,7 +11,7 @@ import Product  from './pages/Product';
 
 ReactDOM.render(
   <Router>
-    <Routes>
+    <Routes basename={process.env.PUBLIC_URL}>
       <Route exact path="" element={<App/>} />
       <Route path="carousel/:site" element={<Product/>}/>
     </Routes>
