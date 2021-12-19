@@ -22,7 +22,7 @@ body {
 }
 
 .ContForm {
-  width: 30%;
+  width: 35%;
 }
 
 .formSearch {
@@ -76,6 +76,8 @@ body {
 .titleResult {
   padding: 30px 0;
   text-align: center;
+  color: #666;
+  font-weight: 400;
 }
 
 .infoPago {
@@ -84,6 +86,38 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+.infoPago h2 {
+  color: #666;
+  font-weight: 400;
+}
+
+.contStar {
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #fdfdfd;
+}
+.contStar img {
+  width: 100px;
+  height: auto;
+}
+.contStar span {
+  height: 60%;
+  width: 3px;
+  background: #fff159;
+  /* background-color: #e2e2e2; */
+}
+.contStar h3 {
+  text-align: left;
+  color: #060e9f;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 700px) {

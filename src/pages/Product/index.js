@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import logoSmall from "../../picture/logo-s.png";
+import logoXL from "../../picture/logo-l.png";
 import Icon from "@mdi/react";
 import { mdiMagnify } from "@mdi/js";
 import "./Product.css";
@@ -10,19 +11,18 @@ import Carrousel from "../../components/Carrousel";
 function Product() {
   const { site } = useParams();
   const [inputSearch, setInputSearch] = useState("");
+  const [dataProduct, setDataProduct] = useState([]);
 
   function handleChange(e) {
     const { value } = e.target;
     setInputSearch(value);
-    //console.log(inputSearch);
   }
 
   function handleClick() {
     if (inputSearch.trim() !== "") {
-      console.log("valido");
       fetchData();
     } else {
-      console.log("error");
+      console.log("Error dato ingresado");
     }
   }
 
@@ -30,8 +30,6 @@ function Product() {
     e.preventDefault();
     handleClick();
   }
-
-  const [dataProduct, setDataProduct] = useState([]);
 
   async function fetchData() {
     const data = await fetch(
@@ -54,6 +52,7 @@ function Product() {
               type="text"
               placeholder="Buscar productos, marcas y más..."
               onChange={handleChange}
+              value={inputSearch}
             />
             <button type="button" className="btonSearch" onClick={handleClick}>
               <Icon path={mdiMagnify} size={1} color="#666666" />
@@ -73,9 +72,15 @@ function Product() {
             </div>
           </>
         ) : (
-          <>
-            <p></p>
-          </>
+          <div className="contStar">
+            <img src={logoXL} alt="Logo MercadoLibre" />
+            <span></span>
+            <h3>
+              Nunca <br /> dejes de
+              <br />
+              Buscar
+            </h3>
+          </div>
         )}
       </main>
     </>

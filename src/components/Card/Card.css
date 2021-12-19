@@ -10,6 +10,10 @@
   border-radius: 4px;
   transition: height 0.1s ease-out;
 }
+
+a {
+  text-decoration: none;
+}
 .contPic {
   width: 224px;
   height: 224px;
@@ -56,4 +60,15 @@
 
 .contCard:hover .conteInfo p {
   opacity: 1;
+}
+
+@media screen and (max-width: 540px) {
+  .conteInfo p {
+    opacity: 1;
+  }
+  .contCard {
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    height: max-content;
+  }
 }

@@ -1,7 +1,14 @@
 .container {
-  width: 90%;
-  height: 350px;
+  width: 85%;
+  min-height: 350px;
+  margin-bottom: 20px;
 }
 .slick-slider {
   height: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+  opacity: 1;
 }

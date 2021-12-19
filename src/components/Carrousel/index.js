@@ -27,21 +27,21 @@ function Carrousel(props) {
         }
       },
       {
-        breakpoint: 1010,
+        breakpoint: 1060,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         }
       },
       {
-        breakpoint: 760,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         }
       },
       {
-        breakpoint: 500,
+        breakpoint: 540,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -55,7 +55,7 @@ function Carrousel(props) {
       <Slider {...settings}>
         {infoProduct.map((info) => {
           return (
-            <div key={info.id} style={{width: 214}}>
+            <div key={info.id} className="divCarrousel" >
               <Card  infoProduct={info} />
             </div>
           );
