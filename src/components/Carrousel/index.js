@@ -55,7 +55,7 @@ function Carrousel(props) {
       <Slider {...settings}>
         {infoProduct.map((info) => {
           return (
-            <div key={info.id} className="divCarrousel" >
+            <div key={info.id}>
               <Card  infoProduct={info} />
             </div>
           );
