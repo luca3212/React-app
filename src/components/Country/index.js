@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom';
-import './country.css';
+import { Link } from "react-router-dom";
+import "./country.css";
 
 import MGT from "../../picture/flags/MGT.png";
 import MHN from "../../picture/flags/MHN.png";
@@ -21,107 +21,97 @@ import MLA from "../../picture/flags/MLA.png";
 import MPE from "../../picture/flags/MPE.png";
 import MNI from "../../picture/flags/MNI.png";
 
+function Country(props) {
+  const { nameCountry, idCountry } = props;
+  const LATAM = [
+    {
+      name: "Guatemala",
+      imgid: MGT,
+    },
+    {
+      name: "Honduras",
+      imgid: MHN,
+    },
+    {
+      name: "Colombia",
+      imgid: MCO,
+    },
+    {
+      name: "Panamá",
+      imgid: MPA,
+    },
+    {
+      name: "Ecuador",
+      imgid: MEC,
+    },
+    {
+      name: "Brasil",
+      imgid: MLB,
+    },
+    {
+      name: "Cuba",
+      imgid: MCU,
+    },
+    {
+      name: "El Salvador",
+      imgid: MSV,
+    },
+    {
+      name: "Uruguay",
+      imgid: MLU,
+    },
+    {
+      name: "Mexico",
+      imgid: MLM,
+    },
+    {
+      name: "Costa Rica",
+      imgid: MCR,
+    },
+    {
+      name: "Dominicana",
+      imgid: MRD,
+    },
+    {
+      name: "Bolivia",
+      imgid: MBO,
+    },
+    {
+      name: "Paraguay",
+      imgid: MPY,
+    },
+    {
+      name: "Chile",
+      imgid: MLC,
+    },
+    {
+      name: "Venezuela",
+      imgid: MLV,
+    },
+    {
+      name: "Argentina",
+      imgid: MLA,
+    },
+    {
+      name: "Perú",
+      imgid: MPE,
+    },
+    {
+      name: "Nicaragua",
+      imgid: MNI,
+    },
+  ];
 
+  const picURL = LATAM.find((dato) => dato.name === nameCountry);
 
-function Country(props){
-    const {nameCountry , idCountry} = props;
-    const LATAM =[
-        {
-            name: "Guatemala"
-            , imgid : MGT
-        },
-        { 
-            name: "Honduras"  
-            , imgid: MHN
-        },
-        { 
-            name: "Colombia"  
-            , imgid: MCO
-        },
-        { 
-            name: "Panamá"  
-            , imgid: MPA
-        },
-        { 
-            name: "Ecuador"  
-            , imgid: MEC
-        },
-        { 
-            name: "Brasil"  
-            , imgid: MLB
-        },
-        { 
-            name: "Cuba"  
-            , imgid: MCU
-        },
-        { 
-            name: "El Salvador"  
-            , imgid: MSV
-        },
-        { 
-            name: "Uruguay"  
-            , imgid: MLU
-        },
-        { 
-            name: "Mexico"  
-            , imgid: MLM
-        },
-        { 
-            name: "Costa Rica"  
-            , imgid: MCR
-        },
-        { 
-            name: "Dominicana"  
-            , imgid: MRD
-        },
-        { 
-            name: "Bolivia"  
-            , imgid: MBO
-        },
-        { 
-            name: "Paraguay"  
-            , imgid: MPY
-        },
-        { 
-            name: "Chile"  
-            , imgid: MLC
-        },
-        { 
-            name: "Venezuela"  
-            , imgid: MLV
-        },
-        { 
-            name: "Argentina"  
-            , imgid: MLA
-        },
-        { 
-            name: "Perú"  
-            , imgid: MPE
-        },
-        { 
-            name: "Nicaragua" 
-            , imgid:  MNI
-        }
-    ];
-    
-    const picURL = LATAM.find(dato => dato.name === nameCountry);
-
-    return(
-        <>
-            <li className='listLi'>
-                <img src={picURL.imgid} alt="" width="28px" height="20px"/>
-                <Link to={`/carousel/${idCountry}`} >{nameCountry}</Link>
-            </li>
-        </>
-    );
+  return (
+    <>
+      <li className="listLi">
+        <img src={picURL.imgid} alt="" width="28px" height="20px" />
+        <Link to={`/carousel/${idCountry}`}>{nameCountry}</Link>
+      </li>
+    </>
+  );
 }
 
 export default Country;
-
-
-
- 
-
-
-
-

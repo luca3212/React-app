@@ -4,10 +4,8 @@ import "./Card.css";
 function Card(props) {
   const { infoProduct } = props;
 
-  function handleClick() {}
-
   return (
-    <div className="contCard" onClick={handleClick}>
+    <div className="contCard">
       <a href={infoProduct.permalink} target="_blank" rel="noreferrer">
         <div className="contPic">
           <img src={infoProduct.thumbnail} alt={infoProduct.title} />
