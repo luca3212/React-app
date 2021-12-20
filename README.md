@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Primera aplicacion en React js
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Web realizada para ejercicio de React js en el curso de [Courseit](https://courseit.io/).
 
-In the project directory, you can run:
+[DEMO](https://luca3212.github.io/React-app/)
 
-### `npm start`
+Queremos crear una aplicacion que replique las siguientes fotos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Image](https://courseit-statics.nyc3.digitaloceanspaces.com/contenido/online/react/meli1.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Image](https://courseit-statics.nyc3.digitaloceanspaces.com/contenido/online/react/meli2.png)
 
-### `npm test`
+**Cosas a tener en cuenta**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- En base a la opcion seleccionada en la primer imagen, la segunda imagen tiene que traer los resultados filtrados por esa nacionalidad
+- Ambas pantallas tienen que estar en una misma aplicacion pero con rutas distintas
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Rutas**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Primera imagen tiene que estar en "/"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Segunda imagen tiene que estar en "/carousel/:site"
 
-### `npm run eject`
+**Codigos**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Argentina -> MLA
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Bolivia -> MBO
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Brasil -> MLB
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Colombia -> MCO
 
-## Learn More
+**API**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`https://api.mercadolibre.com/sites/SITE/search?q=BUSQUEDA`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Recursos**
 
-### Code Splitting
+https://http2.mlstatic.com/resources/deals/exhibitors_resources/mla-menu-desktop-notification-picture-86b2b844-4c2d-4b7c-8649-4fef867e0b9d.png
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+https://http2.mlstatic.com/ui/navigation/4.4.4/mercadolibre/logo__large_plus@2x.png
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://static.mlstatic.com/org-img/homesnw/img/ml-logo@2x.png?v=4.0
