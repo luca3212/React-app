@@ -1,10 +1,12 @@
-# Primera aplicacion en React js
+# Primera aplicación en React js
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Web realizada para ejercicio de React js en el curso de [Courseit](https://courseit.io/).
 
 [DEMO](https://luca3212.github.io/React-app/)
+
+Desafío:
 
 Queremos crear una aplicacion que replique las siguientes fotos:
 
